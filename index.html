@@ -1,80 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Hệ thống Gạch Thẻ Tự Động</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tải APK</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;display:flex;min-height:100vh;align-items:center;justify-content:center;background:#f6f7fb;margin:0}
+    .card{background:#fff;padding:2rem;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08);width:320px;text-align:center}
+    h1{font-size:1.25rem;margin:0 0 0.5rem}
+    p{color:#555;margin:0 0 1rem}
+    .btn{display:inline-block;padding:0.6rem 1rem;border-radius:8px;background:#2563eb;color:#fff;text-decoration:none;font-weight:600}
+    small{display:block;margin-top:1rem;color:#999}
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Gạch Thẻ Pro</a>
-      <div>
-        <a class="btn btn-outline-light me-2" href="#">Đăng nhập</a>
-        <a class="btn btn-outline-light" href="#">Đăng ký</a>
-      </div>
-    </div>
-  </nav>
+  <div class="card">
+    <h1>Tải ứng dụng (APK)</h1>
+    <p>Nhấn nút bên dưới để tải file APK về máy Android của bạn.</p>
 
-  <div class="container mt-5">
-    <h2 class="text-center">Nạp Thẻ Tự Động</h2>
-    <form id="rechargeForm">
-      <div class="mb-3">
-        <label for="network" class="form-label">Chọn nhà mạng</label>
-        <select class="form-select" id="network" name="network">
-          <option value="Viettel">Viettel</option>
-          <option value="Mobifone">Mobifone</option>
-          <option value="Vinaphone">Vinaphone</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label for="serial" class="form-label">Mã serial</label>
-        <input type="text" class="form-control" id="serial" name="serial" required>
-      </div>
-      <div class="mb-3">
-        <label for="code" class="form-label">Mã thẻ</label>
-        <input type="text" class="form-control" id="code" name="code" required>
-      </div>
-      <div class="mb-3">
-        <label for="amount" class="form-label">Mệnh giá</label>
-        <select class="form-select" id="amount" name="amount">
-          <option value="10000">10.000đ</option>
-          <option value="20000">20.000đ</option>
-          <option value="50000">50.000đ</option>
-          <option value="100000">100.000đ</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-primary">Gạch Thẻ</button>
-    </form>
+    <!-- Nếu file app.apk nằm cùng thư mục với index.html -->
+    <a class="btn" href="app.apk" download="https://www.mediafire.com/file/mu7l0hkafnnqbs6/PlayMod.apk/file">Tải xuống APK</a>
 
-    <hr class="my-5">
-
-    <h2 class="text-center">Chuyển Tiền Nội Bộ</h2>
-    <form id="transferForm">
-      <div class="mb-3">
-        <label for="receiver" class="form-label">Tài khoản nhận</label>
-        <input type="text" class="form-control" id="receiver" name="receiver" required>
-      </div>
-      <div class="mb-3">
-        <label for="amount_transfer" class="form-label">Số tiền</label>
-        <input type="number" class="form-control" id="amount_transfer" name="amount_transfer" required>
-      </div>
-      <button type="submit" class="btn btn-success">Chuyển tiền</button>
-    </form>
+    <small>Lưu ý: bật Cài đặt -> Ứng dụng không rõ nguồn gốc để cài (Android).</small>
   </div>
-
-  <script>
-    // Gửi dữ liệu gạch thẻ
-    document.getElementById('rechargeForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert("Gửi yêu cầu gạch thẻ... (chức năng cần tích hợp API)");
-    });
-
-    // Gửi yêu cầu chuyển tiền
-    document.getElementById('transferForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert("Gửi yêu cầu chuyển tiền... (chức năng cần tích hợp backend)");
-    });
-  </script>
 </body>
 </html>
